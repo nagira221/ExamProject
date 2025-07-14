@@ -10,19 +10,19 @@ public abstract class Character implements Creature {
         }
     }
     public final boolean isAlive() {
-        return this.hp > 0;
+        return hp > 0;
     }
     public void showStatus(){
         System.out.println(getName() + ":HP " + getHp());
     }
     public String getName() {
-        return this.name;
+        return name;
     }
     public void setName(String name) {
         this.name = name;
     }
     public int getHp(){
-        return this.hp;
+        return hp;
     }
     public void setHp(int hp){
         this.hp = Math.max(0, hp);

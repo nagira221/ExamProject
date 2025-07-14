@@ -10,7 +10,7 @@ public interface Creature {
         return "";
     }
 
-    default int getHp() {
+    default int getHp(){
         return 0;
     }
 

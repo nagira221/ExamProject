@@ -4,7 +4,7 @@ public class GameMaster {
     public static void main(String[] args) {
         ArrayList<Character> party = new ArrayList<>();
         Hero h = new Hero("勇者", 100, "剣");
-        Wizard w = new Wizard("魔法使い", 60, 10);
+        Wizard w = new Wizard("魔法使い", 60, 20);
         Thief t = new Thief("盗賊", 70);
         System.out.println("---味方パーティ---");
         party.add(h);
@@ -16,11 +16,8 @@ public class GameMaster {
 
         ArrayList<Monster> monsters = new ArrayList<>();
         Matango m = new Matango(45, 'A');
-        m.setName("お化けキノコ");
         Goblin g = new Goblin(50, 'A');
-        g.setName("ゴブリン");
         Slime s = new Slime(40, 'A');
-        s.setName("スライム");
         System.out.println("---敵グループ---");
         monsters.add(m);
         monsters.add(g);
