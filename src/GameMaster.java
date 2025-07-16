@@ -47,48 +47,23 @@ public class GameMaster {
         }
 
         System.out.println("\n---味方パーティ最終ステータス---");
-        if (h.isAlive()) {
-            h.showStatus();
-            System.out.println("生存状況:生存");
-        } else {
-            h.showStatus();
-            System.out.println("生存状況:戦闘不能");
-        }
-        if (w.isAlive()){
-            w.showStatus();
-            System.out.println("生存状況:生存");
-        } else {
-            w.showStatus();
-            System.out.println("生存状況:戦闘不能");
-        }
-        if (t.isAlive()){
-            t.showStatus();
-            System.out.println("生存状況:生存");
-        } else {
-            System.out.println("生存状況:戦闘不能");
+        for (Character c : party) {
+            c.showStatus();
+            if (c.isAlive()) {
+                System.out.println("生存状況:生存");
+            } else {
+                System.out.println("生存状況:戦闘不能");
+            }
         }
 
         System.out.println("\n---敵グループ最終ステータス---");
-        if (m.isAlive()){
-            m.showStatus();
-            System.out.println("生存状況:生存");
-        } else {
-            m.showStatus();
-            System.out.println("生存状況:討伐済み");
-        }
-        if (g.isAlive()){
-            g.showStatus();
-            System.out.println("生存状況:生存");
-        } else {
-            g.showStatus();
-            System.out.println("生存状況:討伐済み");
-        }
-        if (s.isAlive()){
-            s.showStatus();
-            System.out.println("生存状況:生存");
-        } else {
-            s.showStatus();
-            System.out.println("生存状況:討伐済み");
+        for (Monster mo : monsters) {
+            mo.showStatus();
+            if (mo.isAlive()) {
+                System.out.println("生存状況:生存");
+            } else {
+                System.out.println("生存状況:討伐済み");
+            }
         }
     }
 }
