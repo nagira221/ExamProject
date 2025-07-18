@@ -6,14 +6,9 @@ public interface Creature {
 
     void attack(Creature target);
 
-    default String getName() {
-        return "";
-    }
+    String getName();
 
-    default int getHp(){
-        return 0;
-    }
+    int getHp();
 
-    default void setHp(int hp) {
-    }
+    void setHp(int hp);
 }
