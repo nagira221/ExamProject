@@ -5,6 +5,7 @@ public class Wizard extends Character {
         super(name,hp);
         this.mp = mp;
     }
+    @Override
     public void attack(Creature target){
         System.out.println(getName() + "は火の玉を放った！" + target.getName() + "に3のダメージを与えた！");
         target.setHp(target.getHp()-3);
